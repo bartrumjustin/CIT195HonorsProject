@@ -1,0 +1,54 @@
+﻿@page
+@model CIT195HonorsProject.Pages.HardDrives.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HardDrive[0].Manufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HardDrive[0].CapacityGB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HardDrive[0].IsSolidState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HardDrive[0].NodeClusters)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.HardDrive) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CapacityGB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSolidState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NodeClusters.NodeLocation)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

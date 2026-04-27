@@ -8,10 +8,10 @@ namespace CIT195HonorsProject.Models
 
         [Required]
         [StringLength(60)]
-        [Display(Name = "Cluster Location")]
-        public string ClusterLocation { get; set; } = string.Empty;
+        [Display(Name = "Node Location")]
+        public string NodeLocation { get; set; } = string.Empty;
 
         // Nav prop
-        public ICollection<HardDrive>? HardDrives { get; set; }
+        public ICollection<HardDrive>? HardDrives { get; set; } = new List<HardDrive>();
     }
 }

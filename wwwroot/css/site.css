@@ -29,3 +29,22 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+/*Custom styling here*/
+
+html {
+    background-image: url('/media/HDDBackGround.jpg');
+    background-size: cover;
+}
+body{
+    background-color: rgb(255, 255, 255, .6)
+}
+
+/* 2. Text Colors for headings and links */
+h1, h2, a {
+    color: #0056b3;
+}
+
+/* 3. Background color of an element */
+.navbar {
+    background-color: #f8f9fa !important;
+}

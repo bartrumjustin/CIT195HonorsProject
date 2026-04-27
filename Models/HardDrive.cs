@@ -18,10 +18,10 @@ namespace CIT195HonorsProject.Models
         [Display(Name = "Is SSD")]
         public bool IsSolidState { get; set; }
 
-        [Display(Name = "Assigned Cluster")]
+        [Display(Name = "Assigned Node")]
         public int NodeClusterId { get; set; }
 
         // Nav prop
-        public NodeCluster? NodeCluster { get; set; }
+        public NodeCluster? NodeClusters { get; set; }
     }
 }
